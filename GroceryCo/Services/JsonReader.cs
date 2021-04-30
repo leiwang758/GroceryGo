@@ -16,26 +16,24 @@ namespace GroceryCo
 
         public JsonReader(string pricesFile, string salesFile)
         {
+
             setPrices(pricesFile);
             setSales(salesFile);
-
+            
         }
 
         // Read normal prices from the prices.json file, and return a list of Price objects
         public void setPrices(string pricesFile)
         {
+            
             this.prices = JsonConvert.DeserializeObject<List<Price>>(File.ReadAllText("../../../Files/" + pricesFile));
            
-            
         }
 
         // Read on sale prices from the sales.json file, and return a list of Sale objects
         public void setSales(string salesFile)
         {
             this.sales = JsonConvert.DeserializeObject<List<Sale>>(File.ReadAllText("../../../Files/" + salesFile));
-            int i = 0;
-
-          
         }
 
         

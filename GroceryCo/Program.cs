@@ -46,7 +46,17 @@ namespace GroceryCo
             try
             {
                 // Read the prices and sales information
-                JsonReader reader = new JsonReader("prices.json", "sales.json");
+                JsonReader reader;
+                try
+                {
+                    reader = new JsonReader("prices.json", "sales.json");
+                }
+                catch (FileNotFoundException e)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("No sales and prices file are found, please put them in the right folder and try again.");
+                    return;
+                }
                 reader.readBasket(filename);
 
                 // Create a processor that takes as input: the prices and sales information and grocerylist 
@@ -61,7 +71,7 @@ namespace GroceryCo
             catch(FileNotFoundException e)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("File not found! please try again", ConsoleColor.Red);
+                Console.WriteLine("File not found! please try again");
                 Console.ResetColor();
             }
             catch (Exception e)

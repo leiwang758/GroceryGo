@@ -3,18 +3,18 @@
     "id": "Apple",
     "onSalePrice": 0.6,
     "startDate": "2021-04-28 00:00:00",
-    "endDate": "2021-04-30 23:59:59",
+    "endDate": "2021-05-04 23:59:59",
   },
   {
     "id": "Banana",
     "onSalePrice": 0.8,
     "startDate": "2021-04-28 00:00:00",
-    "endDate": "2021-04-30 23:59:59",
+    "endDate": "2021-05-03 23:59:59",
   },
   {
     "id": "Orange",
     "onSalePrice": 0.9,
     "startDate": "2021-04-27 00:00:00",
-    "endDate": "2021-04-28 23:59:59",
+    "endDate": "2021-05-01 23:59:59",
   }
 ]
