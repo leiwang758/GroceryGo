@@ -26,6 +26,7 @@ namespace GroceryCo
             DateTime currentTime = DateTime.Now;
             decimal? normalPrice = null;
             decimal? salePrice = null;
+            
             foreach (Price price in this.prices) { 
                 if (id == price.id)
                 {
@@ -71,6 +72,7 @@ namespace GroceryCo
                     totalPrice += item.onSalePrice * item.num;
                 }
             }
+            
             return totalPrice;
         }
 
@@ -79,6 +81,7 @@ namespace GroceryCo
         {
             var idDict = new Dictionary<string, int>();
             List<Grocery> compactedList = new List<Grocery>();
+            
             foreach (Grocery grocery in list)
             {
                 if (!idDict.ContainsKey(grocery.id))
@@ -99,6 +102,7 @@ namespace GroceryCo
                     num = idDict[id]
                 });
             }
+            
             return compactedList;
 
         }
@@ -108,6 +112,7 @@ namespace GroceryCo
         {
             decimal? normalPrice = null;
             decimal? salePrice = null;
+            
             foreach (var item in this.compactedList) {
                 (normalPrice, salePrice) = getPriceById(item.id);
                 item.price = normalPrice;
