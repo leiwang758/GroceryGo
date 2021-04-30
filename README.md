@@ -23,6 +23,7 @@ This program takes json files as input, place the json files inside the Files fo
 - I created two types of classes that handle modeling the data and processing the data, respectively.
 - For each list input, I compacted it so that it's grouped by item name, which is more clean and readable.
 - For calculating the correct price, I compared the current time with the time specified in the json files.
+- The json reading logic can also handle sales.json file with different sales time slots.
 
 # Assumption & Limitation
 
