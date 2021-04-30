@@ -4,7 +4,7 @@ This program takes json files as input, place the json files inside the Files fo
 
 - For example, run "\bin\Debug\netcoreapp3.1\GroceryCo.exe" and input "fruits.json" as the checkout file
 
-# Prerequisite
+# Framework
 
 - .Net Core 3.1
 
