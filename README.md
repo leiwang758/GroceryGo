@@ -3,7 +3,7 @@ Coding exercise for AbsorbLMS.
 
 # Running program
 
-This program takes JSON files as input and prints out a receipt list.
+This program takes the grocery list JSON files as input and prints out a receipt list.
 
 - Open "GroceryCo.sln" in Visual Studio (I'm using VS2019), install the Newtonsoft.Json package in NuGet.
 - Put the required sales.json and prices.json and the input file inside the Files folder that follows the same structure as the example.
