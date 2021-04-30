@@ -74,7 +74,7 @@ namespace GroceryCo
             return totalPrice;
         }
 
-        // Generate a new list that group the same grocery item and set the num property
+        // Generate a new list that groupes the same grocery item and set the num property
         public List<Grocery> getCompactedList(List<Grocery> list)
         {
             var idDict = new Dictionary<string, int>();
