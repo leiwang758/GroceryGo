@@ -30,7 +30,7 @@ namespace GroceryCo
             Console.WriteLine("                         Total:             {0, 1}\n\n\n", receipt.totalPrice );
         }
         
-        // Print the main receipt body
+        // Print the main receipt body, check if each item is on sale or not
         public void displayBody()
         {
 
