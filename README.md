@@ -1,5 +1,5 @@
 # GroceryGo
-Code exercise for AbsorbLMS.
+Coding exercise for AbsorbLMS.
 
 # Running program
 
