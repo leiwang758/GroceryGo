@@ -1,5 +1,5 @@
 # GroceryGo
-Code exercise for AbsorbLMS
+Code exercise for AbsorbLMS.
 
 # Running program
 
@@ -14,9 +14,9 @@ This program takes json files as input, place the json files inside the Files fo
 
 # Project structure
 
-- Files: json files that have the price and sales info, and checkout list
-- Models: all data entities
-- Services: services for processing data
+- Files: json files that have the price and sales info, and checkout list.
+- Models: all data entities.
+- Services: services for processing data.
 
 # Design Choice
 
@@ -30,7 +30,7 @@ This program takes json files as input, place the json files inside the Files fo
 - I didn't implement any data validation logic, just simple error catch.
 - Currently the sales and prices json file are hard-coded.
 - This is actually my first C# experience, variable naming and code structuring might not be conventional.
-- No unit tests
+- No unit tests.
 
 # Nuget
 
