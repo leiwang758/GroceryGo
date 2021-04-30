@@ -8,7 +8,7 @@ This program takes json files as input, place the json files inside the Files fo
 - Open "GroceryCo.sln" in Visual Studio (I'm using VS2019), install Newtonsoft.Json package in Nuget.
 - Ctrl-F5 to compile/run or run "\bin\Debug\netcoreapp3.1\GroceryCo.exe", and input "fruits.json" as the checkout file.
 
-# Prerequisite
+# Framework
 
 - .Net Core 3.1
 
