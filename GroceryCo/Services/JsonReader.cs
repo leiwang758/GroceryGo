@@ -33,9 +33,10 @@ namespace GroceryCo
         // Read on sale prices from the sales.json file, and return a list of Sale objects
         public void setSales(string salesFile)
         {
+            
             this.sales = JsonConvert.DeserializeObject<List<Sale>>(File.ReadAllText("../../../Files/" + salesFile));
+            
         }
-
         
         // Read the checkout list from the input json file, and return a list of Grocery objects
         public void readBasket(string basketFile)
