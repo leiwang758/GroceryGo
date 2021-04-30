@@ -34,7 +34,6 @@ namespace GroceryCo
                 catch (Exception e)
                 {
                     Console.WriteLine("Error: " + e.ToString());
-
                 }
             }
             
