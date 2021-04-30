@@ -6,7 +6,8 @@ Coding exercise for AbsorbLMS.
 This program takes json files as input, place the json files inside the Files foler, and execute the exe file inside the bin folder
 
 - Open "GroceryCo.sln" in Visual Studio (I'm using VS2019), install Newtonsoft.Json package in Nuget.
-- Ctrl-F5 to compile/run or run "\bin\Debug\netcoreapp3.1\GroceryCo.exe", and input "fruits.json" as the checkout file.
+- Put the required sales.json and prices.json, and the input file inside the Files folder that follows the same structure as the example.
+- Ctrl-F5 to compile/run or run "\bin\Debug\netcoreapp3.1\GroceryCo.exe", and input the checkout list file (e.g., fruit.json) as the checkout file.
 
 # Framework
 
