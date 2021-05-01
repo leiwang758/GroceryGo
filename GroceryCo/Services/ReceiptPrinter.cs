@@ -17,9 +17,9 @@ namespace GroceryCo
         public void displayHeader()
         {
             Console.WriteLine();
-            Console.WriteLine("================   GroceryCo    ==================" + "\n");
+            Console.WriteLine("=================   GroceryCo   ==================" + "\n");
             Console.WriteLine("**************************************************");
-            Console.WriteLine(" Item                                       Price ");
+            Console.WriteLine(String.Format(" {0, -10} {1, -10} {2, 24}", "Item", "Num", "Price"));
             Console.WriteLine("##################################################");
         }
 
@@ -38,12 +38,14 @@ namespace GroceryCo
             {
                 if (!item.onSale)
                 {
-                    Console.WriteLine(String.Format(" {0, -10} x{1, -10} {2, 24}\n", item.id, item.num, item.price));
+                    Console.WriteLine(String.Format(" {0, -10} x{1, -10} {2, 20}/each\n", item.id, item.num, item.price));
+                    Console.WriteLine(String.Format("Subtotal: {0}".PadLeft(49) + "\n", item.price * item.num));
                 }
                 else
                 {
-                    Console.WriteLine(String.Format(" {0, -10} x{1, -10} {2, 24}", item.id, item.num, item.price));
+                    Console.WriteLine(String.Format(" {0, -10} x{1, -10} {2, 20}/each", item.id, item.num, item.price));
                     Console.WriteLine(String.Format("(Sale: {0})".PadLeft(49)+"\n",item.onSalePrice));
+                    Console.WriteLine(String.Format("Subtotal: {0}".PadLeft(49) + "\n", item.onSalePrice * item.num));
                 }
             }
         }
