@@ -50,7 +50,7 @@ namespace GroceryCo
                 {
                     reader = new JsonReader("prices.json", "sales.json");
                 }
-                catch (FileNotFoundException e)
+                catch (FileNotFoundException)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("No sales and prices file are found, please put them in the right folder and try again.");
@@ -67,7 +67,7 @@ namespace GroceryCo
                 ReceiptPrinter receiptPrinter = new ReceiptPrinter(Receipt);
                 receiptPrinter.print();
             }
-            catch(FileNotFoundException e)
+            catch(FileNotFoundException)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("File not found! please try again");
