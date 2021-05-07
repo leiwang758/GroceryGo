@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace GroceryCo
 {
@@ -26,35 +27,40 @@ namespace GroceryCo
             DateTime currentTime = DateTime.Now;
             decimal? normalPrice = null;
             decimal? salePrice = null;
-           
-            
-            // should use LINQ
-            foreach (Price price in this.prices) { 
-                if (id == price.id)
-                {
-                    foreach (PriceByTime p in price.prices)
-                        if (DateTime.Compare(currentTime, p.date) > 0)
-                        {
-                            normalPrice = p.price;
-                        }
-                        else
-                        {
-                            break;
-                        }
-                }
-            }
 
-            foreach (Sale sale in this.sales)
-            {
-                if (id == sale.id)
-                {
-                    if (DateTime.Compare(currentTime, sale.startDate) > 0 && DateTime.Compare(currentTime, sale.endDate) < 0)
-                    {
-                        salePrice = sale.onSalePrice;
-                        break;
-                    }
-                }
-            }
+
+            //this.prices.Select<>
+            normalPrice = this.prices.Where(p => p.id == id).FirstOrDefault().prices.Where(p => DateTime.Compare(currentTime, p.date) > 0).FirstOrDefault().price;
+
+            // should use LINQ
+            //foreach (Price price in this.prices) { 
+            //    if (id == price.id)
+            //    {
+            //        foreach (PriceByTime p in price.prices)
+            //            if (DateTime.Compare(currentTime, p.date) > 0)
+            //            {
+            //                normalPrice = p.price;
+            //            }
+            //            else
+            //            {
+            //                break;
+            //            }
+            //    }
+            //}
+
+            salePrice = this.sales.Where(s => s.id == id && DateTime.Compare(currentTime, s.startDate) > 0 && DateTime.Compare(currentTime, s.endDate) < 0).FirstOrDefault().onSalePrice;
+
+            //foreach (Sale sale in this.sales)
+            //{
+            //    if (id == sale.id)
+            //    {
+            //        if (DateTime.Compare(currentTime, sale.startDate) > 0 && DateTime.Compare(currentTime, sale.endDate) < 0)
+            //        {
+            //            salePrice = sale.onSalePrice;
+            //            break;
+            //        }
+            //    }
+            //}
 
             return (normalPrice, salePrice);
         }
