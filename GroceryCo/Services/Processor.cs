@@ -21,12 +21,14 @@ namespace GroceryCo
 
         // Calculate both noraml price and sale price (if any) by item name
         // Compare the current date with the dates on prices and sales
-        public (decimal?, decimal?) getPriceById(string id)
+        private (decimal?, decimal?) getPriceById(string id)
         {
             DateTime currentTime = DateTime.Now;
             decimal? normalPrice = null;
             decimal? salePrice = null;
+           
             
+            // should use LINQ
             foreach (Price price in this.prices) { 
                 if (id == price.id)
                 {
@@ -58,7 +60,7 @@ namespace GroceryCo
         }
 
         // Calculate the total price (incluing sale) from a final grocery list
-        public decimal? getTotalPrice(List<Grocery> list)
+        private decimal? getTotalPrice(List<Grocery> list)
         {
             decimal? totalPrice = 0;
             foreach (Grocery item in list)
@@ -77,7 +79,7 @@ namespace GroceryCo
         }
 
         // Generate a new list that groupes the same grocery item and set the num property
-        public List<Grocery> getCompactedList(List<Grocery> list)
+        private List<Grocery> getCompactedList(List<Grocery> list)
         {
             var idDict = new Dictionary<string, int>();
             List<Grocery> compactedList = new List<Grocery>();
@@ -108,7 +110,7 @@ namespace GroceryCo
         }
 
         // Add the correct price and sale info to the compacted List
-        public void setReceiptList()
+        private void setReceiptList()
         {
             decimal? normalPrice = null;
             decimal? salePrice = null;
